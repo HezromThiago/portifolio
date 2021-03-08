@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --titulo: #000;
+    --text: #383838;
+    --white: #fff;
+    --blue: #0d6efd;
+    --roxo: #6f42c1;
+    --red: #dc3545;
+    --bg: #fafafa;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 18px;
+}
+
+.titulo-section {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.7;
+    color: var(--blue);
+    margin-bottom: 50px;
+}   
+
+/* configurações */
+
+.logo { /* começo do menu */
+    font-size: 1.8rem; 
+    font-weight: 600;
+    line-height: 1.3;
+    color: #fff;
+    margin-left: 20px;
+}
+
+#hamburguer {
+    font-size: 30px;
+    color: #fff;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul {
+    margin-right: 20px;
+}
+
+.menu ul li {
+    display: inline-block;
+    line-height: 1.2;
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    padding-bottom: 3px;
+    border-bottom: 4px solid transparent;
+    transition: all .2s;
+}
+
+.menu ul li a:hover {
+    border-bottom: 4px solid #3d3d3d;
+}
+
+/* Final do menu */
+
+/* Começo do Hero */
+
+ .hero {
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero h2 {
+    margin-top: 180px;
+    font-size: 5rem;
+    color: var(--titulo);
+    font-weight: 800;
+    text-align: center;
+}
+.dev {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--blue);
+    font-size: 2rem;
+} 
+
+.btn-git{
+    margin-top: 10px;
+    width: 240px;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--text);
+    color: var(--white);
+}
+
+.btn-git i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+/* Final do Hero */
+
+
+/* Começo do Sobre mim */
+#sobre_mim {
+    height: 100%;
+    margin: 100px 0;
+    padding: 150px 0;
+    background-color: var(--bg);
+}
+
+.info_eu {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.eu-dev img {
+    width: 400px;
+    height: 450px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.bio {
+    width: 550px;
+    height: 100%;
+    text-align: justify;
+}
+
+.titulo-bio {
+
+    text-align: start;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.bio p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 2;
+    color: var(--text);
+}
+
+.bio p strong {
+    font-size: 1rem;
+    font-weight: 600;
+    border-bottom: 3px dotted var(--red);
+} 
+.bio .p-2 {
+    margin-top: 30px;
+}
+
+.redes_sobre_mim {
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.redes_sobre_mim a {
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    color: var(--white);
+    transition: all .5s;
+}
+
+.redes_sobre_mim a:hover {
+    background-color: var(--white);
+    color: var(--text);
+    border: 3px solid var(--blue);
+}
+
+.redes_sobre_mim i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.redes_sobre_mim .LinkedIn {
+    background-color: var(--blue);
+}
+
+.redes_sobre_mim .github {
+    background-color: var(--text);
+}
+/* Final do Sobre mim */
+
+/* Começo do Portifolio */
+
+.animation {
+    box-shadow: rgb(0 0 0 / 5%) 0px 4px 35px;
+    margin-top: 50px;
+}
+
+
+
+
+
+/* Final do Portifolio */
+
+@media(max-width: 768px){ /* media query para tablet */
+    h1.logo {
+        font-size: 1rem;
+        padding-left: 50px;
+    }
+
+    #hamburguer {
+        display: none;
+    }
+    
+    .menu ul {
+        margin-right: 0;
+    }
+
+    .menu ul li a {
+        font-size: 0.9rem
+    }
+}
+
+@media(max-width: 576px) { /* media query para Mobile */
+    .container-sm {
+        padding: 0 30px;
+    }
+
+    #hamburguer {
+        display: block;
+        margin-right: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    #hamburguer i {
+        color: var(--titulo);
+    }
+
+    h1.logo {
+        font-size: 1.3rem;
+        margin-left: 0px;
+        padding-left: 30px;
+        color: var(--text);
+    }
+
+    i {
+        color: var(--text);
+    }
+
+    .lista-menu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 86%;
+        height: 100vh;
+        background: var(--blue);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    .revelMenu {
+        left: 0;
+    }
+
+    .menu ul li:first-child {
+        margin-top: 60px;
+    } 
+    .menu ul li {
+        margin: 20px 0;
+        line-height: 1.4rem;
+    }
+
+    .menu ul li a {
+        font-size: 1.4rem;
+        color: #fff;
+        margin-top: 40px;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: 87vh;
+    }
+    
+    .hero h2 {
+        margin-top: 180px;
+        font-size: 2.5rem;
+        color: var(--text);
+        font-weight: 800;
+        text-align: center;
+    }
+    .dev {
+        margin-top: 15px;
+        font-weight: 600;
+        color: var(--blue);
+        font-size: 1.5rem;
+    }
+
+    .btn-git {
+        margin-top: 50px;
+        width: 250px;
+        padding: 25px;
+        background-color: var(--text);
+        text-align: center;
+        border-radius: 5px;
+        color: var(--white);
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: all 0.1s;
+    }
+    .btn-git:hover {
+        background-color: var(--blue);
+    }
+
+    .btn-git i {
+        color:  var(--white);
+        font-size: 30px;
+        margin-right: 13px;
+    }
+
+    /*começo section Sobre mim */
+
+    #sobre_mim {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--bg);
+        height: 100%;
+        padding-bottom: 40px 0;
+    }
+
+    .eu-dev {
+        margin: 70px 0;
+    }
+
+    .info_eu {
+        flex-wrap: wrap;
+    }
+
+    .bio {
+        padding: 0px 10px;
+    }
+
+    .bio h3 {
+        text-align: center;
+    }
+
+    #sobre_mim h3 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: var(--blue);
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    
+
+    #sobre_mim p {
+        text-align: justify;
+        line-height: 1.9rem;
+    }
+
+    #sobre_mim p:nth-child(1) {
+        margin-top: 20px;
+    }
+    
+    #sobre_mim p strong {
+        border-bottom: 4px dotted var(--red);
+        font-weight: 600;
+    }
+
+    .redes_sobre_mim {
+        justify-content: space-around;
+        margin-top: 25px;
+    }
+
+    .redes_sobre_mim a {
+        text-align: center; 
+        background-color: var(--text);
+    }
+
+    .btn-sm {
+        padding: 14px 26px;
+        font-size: 0.8rem;
+        border-radius: 5px;
+    }
+    .btn-sm:last-child {
+        margin-left: 2px;
+    }
+
+    .icon {
+        font-size: 20px;
+        margin-right: 7px;
+        color: var(--white);
+    }
+
+    .LinkedIn {
+        background-color: #006699 !important;
+        color: var(--white);
+    }
+
+    .github {
+        background-color: var(--text);
+        color: var(--white);
+    }
+
+    /* Final section Sobre mim */
+
+    /* Começo do Portifolio */
+
+    #portifolio {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .titulo_section {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-align: center;
+        color: var(--blue);
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .animation {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+    }
+
+    .animation .card {
+        width: 100%;
+    }
+
+    .animation:first-child {
+        margin-top: 10px;
+    }
+
+    .img {
+        text-align: center;
+    }
+    
+    .img img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .card h3.titulo_card {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        margin-top: -1px;
+        color: var(--text);
+        text-align: center;
+    }
+
+    .card p {
+        text-align: justify;
+        margin: 30px 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text);
+    }
+
+    .links {
+        justify-content: space-between;
+    }
+    .links a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--titulo);
+        border-bottom: 2px solid black;
+    }
+
+    /* Final do Portifolio */
+    /* Começo das Habilidades */
+
+    #habilidades {
+        background-color: #fafafa;
+        padding: 30px 0;
+    }
+
+    .habi {
+        margin-bottom: 39px;
+        padding-top: 10px;
+    }
+
+    .habi h4 {
+        margin-left: -10px;
+        margin-bottom: 7px;
+        font-size: 1.3rem;
+    }
+    .habi ul li{
+        list-style: inside;
+    }
+
+    /* Final das Habilidades */
+
+    /* Footer */
+
+    footer {
+        background-color: var(--blue);
+        padding: 50px 0;
+    }
+    .footer-1 {
+        flex-direction: column;
+        padding-top: 35px;
+    }
+
+    .titulo_footer {
+        text-align: start;
+        font-size: 1.6rem;
+        font-weight: 800;
+        line-height: 1.4;
+        margin-bottom: 40px;
+        color: var(--white);
+    }
+    
+    .contato {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .contato h4 {
+        margin-left: 0;
+        margin-bottom: 5px;
+        color: var(--white);
+        font-size: 1.4rem;
+    }
+    .contato_links li{
+        margin-left: 15px;
+        margin-bottom: 8px;
+        color: var(--white);
+    }
+    
+    .contato_links li a {
+        color: var(--white);
+        font-size: 1rem;
+    }
+
+    .redes {
+        margin-top: 15px;
+        padding-bottom: 20px;
+    }
+
+    .redes h4 {
+        margin-left: 0;
+        margin-bottom: 5px;
+        color: var(--white);
+        font-size: 1.4rem;
+    }
+
+    .redes_links {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    
+    .redes_links li{
+        margin-left: 15px;
+        margin-bottom: 8px;
+        color: var(--white);
+    }
+
+    .redes_links li a {
+        color: var(--white);
+        font-size: 1rem;
+    }
+
+}
