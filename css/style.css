@@ -31,6 +31,10 @@ html, body {
     display: flex;
 }
 
+.d-wrap {
+    flex-wrap: wrap;
+}
+
 .btn {
     border-radius: 5px;
     padding: 18px;
@@ -222,11 +226,66 @@ html, body {
 
 /* Começo do Portifolio */
 
-.animation {
-    box-shadow: rgb(0 0 0 / 5%) 0px 4px 35px;
+.card {
+    background-color: var(--white);
+    color: var(--white);
+    width: 1130px;
+    height: 350px;
+    margin-top: 50px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 25px 50px -12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.conteudo {
+    flex-basis: 55%;
+    padding: 25px;
+    height: 100%;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--titulo);
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+.links {
+    justify-content: space-between;
+    align-items: flex-end;
     margin-top: 50px;
 }
 
+.links a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--titulo);
+    transition: all .3s;
+}
+
+.links a:hover {
+    color: var(--blue);
+}
+
+.background-image {
+    flex-basis: 45%;
+}
+.background-image img {
+    width: 100%;
+    height: 100%;
+}
 
 
 
