@@ -123,12 +123,17 @@ html, body {
 } 
 
 .btn-git{
-    margin-top: 10px;
+    margin-top: 30px;
     width: 240px;
     text-align: center;
     font-weight: 600;
     background-color: var(--text);
     color: var(--white);
+    transition: all .3s;
+}
+
+.btn-git:hover {
+    background-color: var(--blue);
 }
 
 .btn-git i {
